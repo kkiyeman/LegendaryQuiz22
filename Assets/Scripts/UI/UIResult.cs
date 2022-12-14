@@ -7,18 +7,16 @@ using UnityEngine.SceneManagement;
 public class UIResult : MonoBehaviour
 {
 
+    [SerializeField] Text totalscore;
+    [SerializeField] Text average;
+    [SerializeField] Text grade;
+    [SerializeField] Button btnToMain;
 
-    public Text totalscore;
-    public Text average;
-    public Text grade;
-    public Button btnToMain;
-    // Start is called before the first frame update
     void Start()
     {
         UIManager.GetInstance().SetEventSystem();
         GetScore();
-        btnToMain.onClick.AddListener(OnClickReset);
-        
+        btnToMain.onClick.AddListener(OnClickReset);      
     }
 
     public void GetScore()
@@ -28,14 +26,10 @@ public class UIResult : MonoBehaviour
         grade.text = $"Grade\n{ScoreManager.GetInstance().Grade()}";
     }
 
-
-
     public void OnClickReset()
     {
         UIManager.GetInstance().ClearList();
         SceneManager.LoadScene("Main");
     }
-
-
 
 }

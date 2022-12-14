@@ -8,7 +8,6 @@ public class QuizGen
     public string numQ;
     public string txtQ;
 
-
     public string[] txtA;
 
     public int correctScore;
@@ -21,7 +20,6 @@ public class QuizGen
         txtA = atxt;
         correctScore = cscore;
         corrctNum = cnum;
-
     }
 
 }

@@ -19,13 +19,7 @@ public class ScoreManager : MonoBehaviour
     }
     #endregion
 
-    public int mathScore;
-    public int scienceScore;
-    public int historyScore;
-    public int riddleScore;
-
-    public int totalScore = 0;
-    
+    public int totalScore = 0;    
     public int CorrectCount = 0;
     public int quizcount = 0;
     
@@ -44,7 +38,7 @@ public class ScoreManager : MonoBehaviour
     public int GetAverage()
     {
         int totalscore = 0;
-        int average = 0;
+        int average;
         for(int i = 0; i<scores.Count; i++)
         {
             totalscore += scores[i];
@@ -57,15 +51,15 @@ public class ScoreManager : MonoBehaviour
     {
         int average = GetAverage();
         string grade;
-        if (average > 80 && average <= 100)
+        if (average >= 80)
         {
             grade = "뇌가 섹시함";
         }
-        else if (average > 60 && average <= 80)
+        else if (average >= 60 && average <80)
         {
             grade = "똑똑한 편임";
         }
-        else if (average > 40 && average <= 60)
+        else if (average >= 40 && average < 60)
         {
             grade = "말은 통함";
         }
