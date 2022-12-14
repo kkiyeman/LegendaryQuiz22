@@ -27,6 +27,7 @@ public class QuizManager : MonoBehaviour
     }
     #endregion
 
+    #region QuizListInitiate
     public Quiz quiztype;
     public Dictionary<Quiz, QuizGen[]> quizList = new Dictionary<Quiz, QuizGen[]>();
 
@@ -112,19 +113,11 @@ public class QuizManager : MonoBehaviour
 
         });
     }
+    #endregion
 
     public void Awake()
     {
         InitQuiz();   
-    }
-
-    public void OpenQuiz()
-    {
-        Object quiz = Resources.Load("UI/UIQuiz");
-        GameObject uiquiz = (GameObject)Instantiate(quiz);
-        var quizui = uiquiz.GetComponent<UIQuiz>();
-        
-
     }
 
 }

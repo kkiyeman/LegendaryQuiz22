@@ -7,7 +7,10 @@ public class ResultScene : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        OpenResult();
+        // OpenResult();
+        UIManager uimanager = UIManager.GetInstance();
+        uimanager.SetEventSystem();
+        uimanager.OpenUI("UIResult");
     }
 
 

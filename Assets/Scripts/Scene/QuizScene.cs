@@ -4,16 +4,14 @@ using UnityEngine;
 
 public class QuizScene : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        UIManager.GetInstance().SetEventSystem();
-        QuizManager.GetInstance().OpenQuiz();
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
+    void Start()
+    {      
+        UIManager uimanager = UIManager.GetInstance();
+        uimanager.SetEventSystem();
+        uimanager.OpenUI("UIQuiz");
         
     }
+
+
 }

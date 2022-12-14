@@ -11,6 +11,7 @@ public class UIMain : MonoBehaviour
     public Button btnScience;
     public Button btnHistory;
     public Button btnRiddle;
+    public Button[] btnGenre;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,14 +21,19 @@ public class UIMain : MonoBehaviour
         btnRiddle.onClick.AddListener(OnClickRiddle);
     }
 
-    // Update is called once per frame
-    void Update()
+
+    private void SetBtnGenre()
     {
-        
+        for(int i = 0; i<btnGenre.Length;i++)
+        {
+            
+        }
     }
 
-
-
+    private void OnClickGenre(Quiz genre)
+    {
+        QuizManager.GetInstance();
+    }
     private void OnClickMath()
     {
         QuizManager.GetInstance().quiztype = Quiz.Math;

@@ -32,6 +32,7 @@ public class UIResult : MonoBehaviour
 
     public void OnClickReset()
     {
+        UIManager.GetInstance().ClearList();
         SceneManager.LoadScene("Main");
     }
 

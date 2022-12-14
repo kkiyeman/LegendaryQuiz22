@@ -39,6 +39,8 @@ public class ScoreManager : MonoBehaviour
         totalScore += anyscore;
     }
 
+
+    #region EvaluationSystem;
     public int GetAverage()
     {
         int totalscore = 0;
@@ -61,7 +63,7 @@ public class ScoreManager : MonoBehaviour
         }
         else if (average > 60 && average <= 80)
         {
-            grade = "멍청하진 않음";
+            grade = "똑똑한 편임";
         }
         else if (average > 40 && average <= 60)
         {
@@ -73,4 +75,5 @@ public class ScoreManager : MonoBehaviour
         }
         return grade;
     }
+    #endregion
 }
